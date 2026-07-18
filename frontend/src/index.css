@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@property --border-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: "<angle>";
+}
+
+:root {
+  --bg: #040912;
+  --surface: rgba(7, 17, 31, 0.92);
+  --surface-strong: rgba(10, 24, 44, 0.96);
+  --panel: rgba(8, 22, 38, 0.88);
+  --text: #e6f7ff;
+  --muted: #94a3b8;
+  --accent: #2dd4bf;
+  --accent-strong: #38bdf8;
+  --accent-soft: rgba(45, 212, 191, 0.18);
+  --border: rgba(45, 212, 191, 0.12);
+}
+
+body {
+  @apply bg-[#040912] text-[#e6f7ff];
+  background-image:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.08), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(236, 72, 153, 0.10), transparent 28%),
+    linear-gradient(180deg, #040912 0%, #07111f 42%, #07111f 100%);
+}
+
+.input {
+  @apply w-full bg-[#071725]/85 border border-[#1e3652] rounded-2xl py-3 pl-10 pr-4 text-white placeholder:text-slate-500 focus:ring-2 focus:ring-[#7dd3fc] focus:border-transparent;
+}
+
+.auth-input-icon {
+  @apply absolute left-3 top-1/2 -translate-y-1/2 text-[#94a3b8] size-5;
+}
+
+.auth-input-label {
+  @apply block text-sm font-medium text-[#cbd5e1] mb-2;
+}
+
+.auth-badge {
+  @apply inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-[#2dd4bf]/15 text-[#7dd3fc];
+}
+
+.auth-btn {
+  @apply w-full bg-gradient-to-r from-[#2dd4bf] to-[#7dd3fc] text-[#07111f] rounded-2xl py-3 font-medium shadow-lg shadow-[#2dd4bf]/10 hover:from-[#34d399] hover:to-[#7dd3fc] focus:ring-2 focus:ring-[#7dd3fc];
+}
+
+.auth-link {
+  @apply px-4 py-2 inline-block bg-[#071725]/80 rounded-2xl text-[#7dd3fc] hover:text-[#c0e8ff] text-sm transition-colors;
+}
