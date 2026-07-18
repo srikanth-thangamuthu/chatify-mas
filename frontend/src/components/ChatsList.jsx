@@ -27,7 +27,7 @@ function ChatsList() {
             <div className="flex items-center gap-3">
               <div className={`avatar ${onlineUsers.includes(chat._id) ? "online" : "offline"}`}>
                 <div className="size-12 rounded-full">
-                  <img src={chat.profilePic || "/avatar.png"} alt={chat.fullName} />
+                  <img src={chat.profilePic || "/avatar.svg"} alt={chat.fullName} />
                 </div>
               </div>
               <h4 className="text-[#e6f7ff] font-medium truncate">{chat.fullName}</h4>
