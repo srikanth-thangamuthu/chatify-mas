@@ -46,7 +46,7 @@ function ChatContainer() {
                 <div key={msg._id} className={`chat ${isOwnMessage ? "chat-end" : "chat-start"}`}>
                   <div
                     className={`chat-bubble relative group ${
-                      isOwnMessage ? "bg-cyan-600 text-white" : "bg-slate-800 text-slate-200"
+                      isOwnMessage ? "bg-gradient-to-br from-[#123925] to-[#08140f] text-[#d9efe1] border border-[#1dc8a9] shadow-[0_12px_28px_-18px_rgba(29,200,169,0.75)]" : "bg-[#081216] text-[#bacdc1] border border-[#19322d]"
                     }`}
                   >
                     {msg.isDeleted ? (
@@ -66,10 +66,10 @@ function ChatContainer() {
                       <button
                         type="button"
                         onClick={() => deleteMessage(msg._id)}
-                        className="absolute -top-2 -right-2 rounded-full bg-slate-900/80 p-1.5 opacity-0 transition-opacity group-hover:opacity-100"
+                        className="absolute -top-2 -right-2 rounded-full bg-[#0c2215] p-1.5 opacity-0 transition-opacity group-hover:opacity-100"
                         aria-label="Delete message"
                       >
-                        <Trash2Icon className="size-3.5" />
+                        <Trash2Icon className="size-3.5 text-[#13c9aa]" />
                       </button>
                     )}
 

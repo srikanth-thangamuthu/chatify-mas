@@ -8,28 +8,78 @@
   syntax: "<angle>";
 }
 
+:root {
+  color-scheme: dark;
+  --bg-primary: #030814;
+  --surface: #08101c;
+  --surface-strong: #0c1723;
+  --surface-muted: #0f1824;
+  --border: rgba(38, 168, 141, 0.24);
+  --accent: #14ccb0;
+  --accent-strong: #09a984;
+  --text-primary: #d8e8ea;
+  --text-secondary: #8ba9a8;
+  --text-muted: #7b9b99;
+}
+
+body {
+  background: radial-gradient(circle at top, rgba(20, 204, 176, 0.16), transparent 26%), linear-gradient(180deg, #040b12 0%, #02060b 100%);
+  color: var(--text-primary);
+}
+
 .input {
-  @apply w-full bg-slate-800/50 border border-slate-700 rounded-lg py-2 pl-10 pr-4 text-slate-200 placeholder-slate-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent;
+  @apply w-full rounded-lg py-2 pl-10 pr-4 border;
+  color: #effbff;
+  background-color: rgba(8, 24, 44, 0.82);
+  border-color: rgba(38, 168, 141, 0.45);
+}
+
+.input::placeholder {
+  color: #8aa99a;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(20, 204, 176, 0.18);
+  border-color: rgba(20, 204, 176, 0.88);
 }
 
 .auth-input-icon {
-  @apply absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 size-5;
+  @apply absolute left-3 top-1/2 -translate-y-1/2 size-5;
+  color: #8ee2c1;
 }
 
 .auth-input-label {
-  @apply block text-sm font-medium text-slate-300 mb-2;
+  @apply block text-sm font-medium mb-2;
+  color: #9cbad1;
 }
 
 .auth-badge {
-  @apply inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-cyan-500/20 text-cyan-300;
+  @apply inline-flex items-center px-3 py-1 text-xs font-medium rounded-full;
+  background-color: rgba(20, 204, 176, 0.16);
+  color: #c6f6e8;
 }
 
 .auth-btn {
-  @apply w-full bg-cyan-500 text-white rounded-lg py-2.5 font-medium
-  hover:bg-cyan-600 focus:ring-2 focus:ring-cyan-500;
+  @apply w-full text-white rounded-lg py-2.5 font-medium;
+  background: linear-gradient(90deg, #0e9f83 0%, #0c1510 100%);
+}
+
+.auth-btn:hover {
+  background: linear-gradient(90deg, #14c7a8 0%, #122118 100%);
+}
+
+.auth-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(140, 216, 160, 0.3);
 }
 
 .auth-link {
-  @apply px-4 py-2 inline-block bg-cyan-500/10 rounded-lg text-cyan-400
-  hover:text-cyan-500 text-sm transition-colors;
+  @apply px-4 py-2 inline-block rounded-lg text-sm transition-colors;
+  background-color: rgba(123, 213, 143, 0.08);
+  color: #b8e6c5;
+}
+
+.auth-link:hover {
+  color: #ddf7e5;
 }

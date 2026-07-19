@@ -27,7 +27,7 @@ function ProfileHeader() {
   };
 
   return (
-    <div className="p-6 border-b border-slate-700/50">
+    <div className="p-6 border-b border-[#1a4f74]/50">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           {/* AVATAR */}
@@ -42,7 +42,7 @@ function ProfileHeader() {
                 className="size-full object-cover"
               />
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
-                <span className="text-white text-xs">Change</span>
+                <span className="text-[#d7f7ff] text-xs">Change</span>
               </div>
             </button>
 
@@ -57,11 +57,11 @@ function ProfileHeader() {
 
           {/* USERNAME & ONLINE TEXT */}
           <div>
-            <h3 className="text-slate-200 font-medium text-base max-w-[180px] truncate">
+            <h3 className="text-[#e6f9ff] font-medium text-base max-w-[180px] truncate">
               {authUser.fullName}
             </h3>
 
-            <p className="text-slate-400 text-xs">Online</p>
+            <p className="text-[#8db2c8] text-xs">Online</p>
           </div>
         </div>
 
@@ -69,7 +69,7 @@ function ProfileHeader() {
         <div className="flex gap-4 items-center">
           {/* LOGOUT BTN */}
           <button
-            className="text-slate-400 hover:text-slate-200 transition-colors"
+            className="text-[#8aa7c1] hover:text-[#dffcff] transition-colors"
             onClick={logout}
           >
             <LogOutIcon className="size-5" />
@@ -77,7 +77,7 @@ function ProfileHeader() {
 
           {/* SOUND TOGGLE BTN */}
           <button
-            className="text-slate-400 hover:text-slate-200 transition-colors"
+            className="text-[#8aa7c1] hover:text-[#dffcff] transition-colors"
             onClick={() => {
               // play click sound before toggling
               mouseClickSound.currentTime = 0; // reset to start
