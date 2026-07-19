@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useChatStore } from "../store/useChatStore";
 
 import BorderAnimatedContainer from "../components/BorderAnimatedContainer";
@@ -9,7 +10,11 @@ import ChatContainer from "../components/ChatContainer";
 import NoConversationPlaceholder from "../components/NoConversationPlaceholder";
 
 function ChatPage() {
-  const { activeTab, selectedUser } = useChatStore();
+  const { activeTab, selectedUser, registerMessageListeners } = useChatStore();
+
+  useEffect(() => {
+    registerMessageListeners();
+  }, [registerMessageListeners]);
 
   return (
     <div className="relative w-full max-w-6xl h-[800px]">
